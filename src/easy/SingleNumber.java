@@ -1,6 +1,7 @@
 package easy;
 
 import java.util.HashMap;
+import java.util.Set;
 
 public class SingleNumber {
 	//Given an array of integers, every element appears twice except for one. Find that single one.
@@ -11,9 +12,38 @@ public class SingleNumber {
     	}
     	return result;
     }
+    public static int singleNumber1(int[] nums) {
+/*        int result=0;
+        HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
+        for(int i: nums){
+            if(hm.containsKey(i)){
+                hm.put(i,2);
+            }else{
+                hm.put(i,1);
+            }
+        }
+        for(int i:nums){
+            if(hm.get(i)==1){
+                result=i;
+            };
+        }
+        return result;*/
+        int result=0;
+        HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
+        for(int i: nums){
+            if(hm.containsKey(i)){
+                hm.remove(i);
+            }else{
+                hm.put(i,1);
+            }
+        }
+       
+        
+        return (int) hm.keySet().toArray()[0];
+    }
     //Given an array of integers, every element appears three times except for one. Find that single one.
     public int singlNumber2(int[] nums){
-        HashMap<Integer,Integer> hm=new HashMap<>();
+        HashMap<Integer,Integer> hm=new HashMap<Integer,Integer>();
         for(int num:nums){
             if(!hm.containsKey(num)){
                 hm.put(num,1);
@@ -76,6 +106,11 @@ public class SingleNumber {
             }
         }
         return rets;
+    }
+    
+    public static void main(String[] args){
+    	int[] intarray={1};
+    	System.out.println(singleNumber1(intarray));
     }
     
 }

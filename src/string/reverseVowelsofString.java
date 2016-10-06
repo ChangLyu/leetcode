@@ -1,4 +1,4 @@
-package easy;
+package string;
 
 import java.util.HashSet;
 import java.util.Stack;

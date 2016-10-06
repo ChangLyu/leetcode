@@ -1,8 +1,8 @@
-package easy;
+package string;
 
 public class ReverseString {
 	public static String reverseString1(String str){
-		StringBuffer sb=new StringBuffer(str);
+		StringBuilder sb=new StringBuilder(str);
 		sb.reverse();
 		return sb.toString();
 	
