@@ -1,4 +1,4 @@
-package easy;
+package array;
 
 
 import java.util.HashSet;
@@ -25,6 +25,10 @@ public class IntersectionofTwoArrays {
         }
         return result;
     }
+	public static void main(String[] args){
+		Integer integer=new Integer(2);
+		System.out.println(integer.hashCode());
+	}
     
 
 }

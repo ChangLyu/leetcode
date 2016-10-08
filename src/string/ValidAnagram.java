@@ -1,7 +1,9 @@
-package easy;
+package string;
 
+import java.util.Arrays;
 import java.util.HashMap;
-
+//s = "anagram", t = "nagaram", return true.
+//s = "rat", t = "car", return false.
 public class ValidAnagram {
     public boolean isAnagram(String s, String t) {
         HashMap<Character,Integer> hm=new HashMap<>();
@@ -22,5 +24,24 @@ public class ValidAnagram {
         }
           if(hm.isEmpty())  return true;
           else{ return false; }
+    }
+    //2016/10/07
+    public boolean isAnagram2(String s, String t) {
+        int[] array=new int[26];
+
+        for(int i=0; i<s.length();i++){
+            array[s.charAt(i)-'a']+=1;
+        }
+        for(int i=0; i<t.length();i++){
+            array[t.charAt(i)-'a']-=1;
+            if(array[t.charAt(i)-'a']<0){
+                return false;
+            }
+        }
+        if(s.length()==t.length()){
+            return true;
+        }else {return false;}
+        
+       
     }
 }

@@ -1,4 +1,4 @@
-package easy;
+package string;
 
 public class ExcelSheetColumNumber {
     public int titleToNumber(String s) {
@@ -9,5 +9,12 @@ public class ExcelSheetColumNumber {
         }
         return sum;
     }
-
+//2016-10-07
+    public int titleToNumber2(String s) {
+        int result=0;
+        for(int i=0; i<s.length();i++){
+            result=result*26+s.charAt(i)-'A'+1;
+        }
+        return result;
+    }
 }
