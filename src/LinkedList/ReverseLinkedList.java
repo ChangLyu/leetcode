@@ -1,4 +1,6 @@
-package easy;
+package LinkedList;
+
+import easy.ListNode;
 
 public class ReverseLinkedList {
     public ListNode reverseList(ListNode head) {

@@ -9,7 +9,7 @@ public class RansomNote {
         }
         for(int i=0; i<ransomNote.length();i++){
             arr[ransomNote.charAt(i)-'a']-=1;
-            if(arr[ransomNote.charAt(i)-'a']<=0){
+            if(arr[ransomNote.charAt(i)-'a']<0){
                 return false;
             }
         }
